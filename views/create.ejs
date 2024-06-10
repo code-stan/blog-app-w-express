@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Document</title>
+</head>
+
+<body>
+     <h1>Blog page</h1>
+     <p>Welcome to the blog page powered by node js</p>
+     <%- include("./partials/nav.ejs")%>
+     <div class="create content">
+          <form action="/blogs" method="post">
+               <div class="blog-title-container">
+                    <label for="blogTitle">Blog Title</label>
+                    <br/>
+                    <input type="text" id="blogTitle" placeholder="my favourite holiday" name="title">
+               </div>
+               <br/>
+               <div class="blog-body-container">
+                    <label for="blogBody">Blog Content</label>
+                    <br/>
+                    <!-- <input type="text" name="" id="blogBody"> -->
+                    <textarea id="blogBody" placeholder="write something" name="content"></textarea>
+               </div>
+               <button type="submit">Submit</button>
+          </form>
+     </div>
+</body>
+
+</html>
